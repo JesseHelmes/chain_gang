@@ -26,17 +26,37 @@
         <th>Price</th>
       </tr>
 
-      <tr>
-        <td>Brand</td>
-        <td>Model</td>
-        <td>Year</td>
-        <td>Category</td>
-        <td>Gender</td>
-        <td>Color</td>
-        <td>Weight</td>
-        <td>Condition</td>
-        <td>Price</td>
-      </tr>
+        <?php
+    $parser = new ParseCSV(PRIVATE_PATH . '/used_bicycles.csv');
+    $bike_array = $parser->parse();
+
+    print_r($bike_array);
+        //$bike = new bicycle("brandtest", "modeltest", 1999, 4, "black", "beschrijving", 7, 99.99);
+        ?>
+
+      <!--<tr>
+        <td><?php //echo h($bike->brand); ?></td>
+        <td><?php// echo h($bike->model); ?></td>
+        <td><?php// echo h($bike->year); ?></td>
+        <td><?php //echo h($bike->category); ?></td>
+        <td><?php //echo h($bike->gender); ?></td>
+        <td><?php //echo h($bike->color); ?></td>
+        <td><?php //echo h($bike->getWeightKg()); ?></td>
+        <td><?php// echo h($bike->condition()); ?></td>
+        <td><?php// echo h($bike->price); ?></td>
+      </tr>-->
+
+        <tr>
+            <td>Brand</td>
+            <td>Model</td>
+            <td>Year</td>
+            <td>Category</td>
+            <td>Gender</td>
+            <td>Color</td>
+            <td>Weight</td>
+            <td>Condition</td>
+            <td>Price</td>
+        </tr>
 
     </table>
   </div>
